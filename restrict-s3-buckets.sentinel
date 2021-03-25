@@ -30,5 +30,5 @@ acl_allowed = rule {
 }
 
 main = rule {
-    (bucket_tags and acl_allowed) else false
+    (foo = "bar" and bucket_tags and acl_allowed) else false
 }
