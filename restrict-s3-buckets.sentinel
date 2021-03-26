@@ -31,10 +31,10 @@ acl_allowed = rule {
     }
 }
 
-# main = rule {
-#     (bucket_tags and acl_allowed) else false
-# }
-
 main = rule {
-    foo is "bar"
+    (bucket_tags and acl_allowed) else false
 }
+
+# main = rule {
+#     foo is "bar"
+# }
